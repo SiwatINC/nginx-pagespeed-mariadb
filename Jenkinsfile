@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone') { 
             steps {
-                git url: 'https://github.com/SiwatINC/nginx-pagespeed-mariadb'
+                git branch: 'main', url: 'https://github.com/SiwatINC/nginx-pagespeed-mariadb'
             }
         } 
         stage('Build Docker Image') {
