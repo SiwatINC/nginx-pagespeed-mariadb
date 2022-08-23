@@ -23,10 +23,10 @@ if [ -z "$(ls -A /config)" ]; then
    echo "Please replace yourdomain.com with your domain in /config/nginx/site-confs/default to enable pagespeed."
    exit 0
 else
-   echo "Already Initiated, Starting NGINX PageSpeed, PHP7.3 and MariaDB"
+   echo "Already Initiated, Starting NGINX PageSpeed, PHP7.4 and MariaDB"
    mkdir -p /var/cache/nginx | :
    service mysql start
    echo "If you haven't yet, please replace yourdomain.com with your domain in /config/nginx/site-confs/default to enable pagespeed."
-   cat /config/php/php-overwrite.ini >> /etc/php/7.3/fpm/php.ini
+   cat /config/php/php-overwrite.ini >> /etc/php/7.4/fpm/php.ini
    exit 0
 fi
