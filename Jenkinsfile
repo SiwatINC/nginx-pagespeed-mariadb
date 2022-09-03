@@ -10,7 +10,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    image = docker.build("siwatinc/nginx-pagespeed-mariadb:latest",'Dockerfile --no-cache')
+                    image = docker.build("siwatinc/nginx-pagespeed-mariadb:latest",'./ --no-cache')
                     
                 }
             }
