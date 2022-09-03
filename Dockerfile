@@ -1,4 +1,4 @@
-FROM ghcr.io/siwatinc/nginx-pagespeed:latest
+FROM ghcr.io/siwatinc/nginx-pagespeed:php7.4
 RUN apt-get update && apt-get -y install mariadb-server && echo '[server]' >> /etc/mysql/my.cnf && echo 'datadir=/config/database' >> /etc/mysql/my.cnf
 RUN rm -v /initializer/initialize-builtin.sh
 ADD ./initialize-builtin.sh /initializer/initialize-builtin.sh
