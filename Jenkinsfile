@@ -20,7 +20,6 @@ pipeline {
                 script {
                     docker.withRegistry("https://ghcr.io/v2") {
                         image.push()
-                        image74.push('php7.4')
                     }
                 }
             }
