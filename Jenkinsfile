@@ -11,7 +11,6 @@ pipeline {
             steps {
                 script {
                     image = docker.build("siwatinc/nginx-pagespeed-mariadb:latest",'./ --no-cache')
-                    image74 = image = docker.build("siwatinc/nginx-pagespeed-mariadb:php7.4",'./ --no-cache')
                     
                 }
             }
@@ -21,7 +20,7 @@ pipeline {
                 script {
                     docker.withRegistry("https://ghcr.io/v2") {
                         image.push()
-                        image74.push()
+                        image74.push('php7.4')
                     }
                 }
             }
